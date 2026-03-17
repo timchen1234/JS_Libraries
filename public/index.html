@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust Atlas — Discover the World</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- 1. AOS — Animate On Scroll (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- 2. Glide.js — Carousel (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css" />
+
+    <!-- 3. Leaflet.js — Map (CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+
+    <!-- Our Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════════ NAV ═══════════════ -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Wanderlust <span>Atlas</span></a>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#map-section">Explore Map</a></li>
+                <li><a href="#chart-section">Insights</a></li>
+                <li><a href="#experience">Experiences</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#cta" class="btn btn-gold">Plan a Trip</a>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ HERO — GLIDE.JS ═══════════════ -->
+    <section id="hero">
+        <div class="glide" id="heroGlide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+
+                    <!-- Slide 1: Santorini -->
+                    <li class="glide__slide">
+                        <div class="slide-bg"
+                            style="background-image:url('https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1600&q=80')">
+                        </div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <p class="slide-tag">✦ Greece · Mediterranean</p>
+                            <h1 class="slide-title">Santorini,<br />Where Dreams<br />Meet the Sea</h1>
+                            <p class="slide-sub">Iconic white-washed villages, volcanic beaches, and sunsets that paint
+                                the sky gold — Santorini is pure magic.</p>
+                            <div class="slide-btns">
+                                <a href="#destinations" class="btn btn-gold">Explore Now</a>
+                                <a href="#map-section" class="btn btn-outline">View on Map</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 2: Kyoto -->
+                    <li class="glide__slide">
+                        <div class="slide-bg"
+                            style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=80')">
+                        </div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <p class="slide-tag">✦ Japan · East Asia</p>
+                            <h1 class="slide-title">Kyoto,<br />Ancient Temples<br />&amp; Cherry Blossoms</h1>
+                            <p class="slide-sub">A living museum of Japanese tradition — glide through bamboo forests,
+                                lantern-lit streets, and timeless shrines.</p>
+                            <div class="slide-btns">
+                                <a href="#destinations" class="btn btn-gold">Explore Now</a>
+                                <a href="#map-section" class="btn btn-outline">View on Map</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 3: Bali -->
+                    <li class="glide__slide">
+                        <div class="slide-bg"
+                            style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=80')">
+                        </div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <p class="slide-tag">✦ Indonesia · Southeast Asia</p>
+                            <h1 class="slide-title">Bali,<br />The Island of<br />a Thousand Temples</h1>
+                            <p class="slide-sub">Emerald rice terraces, sacred ceremonies, and world-class surf breaks —
+                                Bali's spirit captivates every soul.</p>
+                            <div class="slide-btns">
+                                <a href="#destinations" class="btn btn-gold">Explore Now</a>
+                                <a href="#map-section" class="btn btn-outline">View on Map</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Slide 4: Patagonia -->
+                    <li class="glide__slide">
+                        <div class="slide-bg"
+                            style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80')">
+                        </div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <p class="slide-tag">✦ Argentina · South America</p>
+                            <h1 class="slide-title">Patagonia,<br />The Edge of<br />the World</h1>
+                            <p class="slide-sub">Jagged peaks, glacial lakes, and skies so vast they humble every
+                                traveler — Patagonia redefines adventure.</p>
+                            <div class="slide-btns">
+                                <a href="#destinations" class="btn btn-gold">Explore Now</a>
+                                <a href="#map-section" class="btn btn-outline">View on Map</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Bullets -->
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet" data-glide-dir="=3"></button>
+            </div>
+
+            <!-- Arrows -->
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&#8592;</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ STATS STRIP ═══════════════ -->
+    <section id="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-num">195</div>
+                    <div class="stat-label">Countries Covered</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-num">50K+</div>
+                    <div class="stat-label">Happy Travellers</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-num">1,200</div>
+                    <div class="stat-label">Curated Itineraries</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-num">4.9★</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ INTRO ═══════════════ -->
+    <section id="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <!-- Image side -->
+                <div class="intro-img-wrap" data-aos="fade-right">
+                    <img class="intro-img-main"
+                        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80"
+                        alt="Traveller overlooking mountains" />
+                    <img class="intro-img-accent"
+                        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80"
+                        alt="Travel road" />
+                    <div class="intro-badge">
+                        <strong>15+</strong>
+                        <span>Years of<br />Travel</span>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div data-aos="fade-left" data-aos-delay="150">
+                    <p class="section-label">✦ Our Philosophy</p>
+                    <h2 class="section-title">Travel is not a<br />Destination — it's a<br /><em>Transformation</em>
+                    </h2>
+                    <p class="section-sub">We believe every journey rewires how you see the world. Wanderlust Atlas
+                        curates travel experiences that go beyond sightseeing — we help you truly arrive.</p>
+                    <ul class="features-list">
+                        <li>
+                            <div class="feat-icon">🗺️</div>
+                            <span><strong>Hand-crafted itineraries</strong> — each route designed by local experts with
+                                deep cultural knowledge and insider access.</span>
+                        </li>
+                        <li>
+                            <div class="feat-icon">🛡️</div>
+                            <span><strong>Safety &amp; sustainability first</strong> — we partner only with certified
+                                eco-friendly and responsible travel operators.</span>
+                        </li>
+                        <li>
+                            <div class="feat-icon">🤝</div>
+                            <span><strong>24/7 concierge support</strong> — our team is always one message away,
+                                wherever in the world you are.</span>
+                        </li>
+                        <li>
+                            <div class="feat-icon">💳</div>
+                            <span><strong>Best-price guarantee</strong> — we match or beat any comparable package, no
+                                questions asked.</span>
+                        </li>
+                    </ul>
+                    <br />
+                    <a href="#destinations" class="btn btn-gold">Discover Destinations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ DESTINATIONS ═══════════════ -->
+    <section id="destinations">
+        <div class="container">
+            <div class="dest-header">
+                <div>
+                    <p class="section-label">✦ Where to Next?</p>
+                    <h2 class="section-title">Trending<br />Destinations</h2>
+                </div>
+                <a href="#map-section" class="btn btn-gold">See All on Map</a>
+            </div>
+            <div class="dest-grid">
+
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="0">
+                    <div style="overflow:hidden">
+                        <img class="dest-img"
+                            src="https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=900&q=80"
+                            alt="Santorini" loading="lazy" />
+                    </div>
+                    <div class="dest-info">
+                        <p class="dest-country">Greece</p>
+                        <h3 class="dest-name">Santorini</h3>
+                        <p class="dest-desc">Clifftop villages, volcanic beaches, and legendary caldera sunsets make
+                            this Aegean gem endlessly captivating.</p>
+                        <div class="dest-meta">
+                            <div class="dest-price">$1,850 <span>/ person</span></div>
+                            <div class="dest-rating">★ 4.9 <span
+                                    style="color:var(--muted);font-weight:400">(2.1k)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="overflow:hidden">
+                        <img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                            alt="Machu Picchu" loading="lazy" />
+                    </div>
+                    <div class="dest-info">
+                        <p class="dest-country">Peru</p>
+                        <h3 class="dest-name">Machu Picchu</h3>
+                        <p class="dest-desc">The legendary Inca citadel nestled among Andean peaks — a UNESCO wonder
+                            that will leave you breathless.</p>
+                        <div class="dest-meta">
+                            <div class="dest-price">$2,100 <span>/ person</span></div>
+                            <div class="dest-rating">★ 4.8 <span
+                                    style="color:var(--muted);font-weight:400">(1.8k)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="150">
+                    <div style="overflow:hidden">
+                        <img class="dest-img"
+                            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80" alt="Bali"
+                            loading="lazy" />
+                    </div>
+                    <div class="dest-info">
+                        <p class="dest-country">Indonesia</p>
+                        <h3 class="dest-name">Bali</h3>
+                        <p class="dest-desc">Sacred temples, emerald rice terraces, and surf-worthy waves — Bali is a
+                            feast for all the senses.</p>
+                        <div class="dest-meta">
+                            <div class="dest-price">$1,450 <span>/ person</span></div>
+                            <div class="dest-rating">★ 4.9 <span
+                                    style="color:var(--muted);font-weight:400">(3.4k)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="overflow:hidden">
+                        <img class="dest-img"
+                            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80" alt="Kyoto"
+                            loading="lazy" />
+                    </div>
+                    <div class="dest-info">
+                        <p class="dest-country">Japan</p>
+                        <h3 class="dest-name">Kyoto</h3>
+                        <p class="dest-desc">Thousands of shrines, geisha districts, and zen gardens — Kyoto is Japan's
+                            most soulful city.</p>
+                        <div class="dest-meta">
+                            <div class="dest-price">$2,300 <span>/ person</span></div>
+                            <div class="dest-rating">★ 4.9 <span
+                                    style="color:var(--muted);font-weight:400">(2.7k)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ MAP — LEAFLET.JS ═══════════════ -->
+    <section id="map-section">
+        <div class="container">
+            <div class="map-header" data-aos="fade-up">
+                <p class="section-label">✦ Interactive Map</p>
+                <h2 class="section-title">Explore Our Destinations</h2>
+                <p class="section-sub">Click any pin to discover curated travel highlights for each destination.</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="100">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CHART — CHART.JS ═══════════════ -->
+    <section id="chart-section">
+        <div class="container">
+            <div class="chart-grid">
+
+                <!-- Text & Insights -->
+                <div data-aos="fade-right">
+                    <p class="section-label">✦ Travel Insights</p>
+                    <h2 class="section-title">When &amp; How<br />People Travel</h2>
+                    <p class="section-sub">Data from 50,000+ trips helps you pick the perfect time and budget for your
+                        dream vacation.</p>
+                    <br />
+                    <div class="chart-insights">
+                        <div class="insight-card" data-aos="fade-up" data-aos-delay="100">
+                            <p class="insight-title">🌸 Peak Season: April – June</p>
+                            <p class="insight-text">Spring travel is up 34% year-over-year. Book early — deals fill fast
+                                during this golden window.</p>
+                        </div>
+                        <div class="insight-card" data-aos="fade-up" data-aos-delay="200">
+                            <p class="insight-title">💰 Budget Sweet Spot: $2,000–$3,500</p>
+                            <p class="insight-text">Most travellers find the best value-to-experience ratio in the
+                                mid-range budget tier.</p>
+                        </div>
+                        <div class="insight-card" data-aos="fade-up" data-aos-delay="300">
+                            <p class="insight-title">🌍 Top Region: Southeast Asia</p>
+                            <p class="insight-text">42% of all bookings go to Southeast Asian destinations, driven by
+                                affordability and culture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Canvas -->
+                <div class="chart-canvas-wrap" data-aos="fade-left" data-aos-delay="150">
+                    <div class="chart-tabs">
+                        <button class="chart-tab active" onclick="switchChart('monthly')">Monthly Trips</button>
+                        <button class="chart-tab" onclick="switchChart('budget')">Budget Split</button>
+                        <button class="chart-tab" onclick="switchChart('region')">By Region</button>
+                    </div>
+                    <canvas id="mainChart" height="280"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCES ═══════════════ -->
+    <section id="experience">
+        <div class="container">
+            <div style="text-align:center" data-aos="fade-up">
+                <p class="section-label">✦ What We Offer</p>
+                <h2 class="section-title">Every Kind of Adventure</h2>
+                <p class="section-sub" style="margin:0 auto">Whether you crave solitude, culture, thrill, or flavour —
+                    we have the perfect journey waiting for you.</p>
+            </div>
+            <div class="exp-grid">
+                <div class="exp-card" data-aos="flip-left" data-aos-delay="0">
+                    <div class="exp-icon">🏔️</div>
+                    <h3 class="exp-title">Adventure Treks</h3>
+                    <p class="exp-text">From Himalayan summits to Andean trails, push your limits in the world's wildest
+                        places.</p>
+                </div>
+                <div class="exp-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="exp-icon">🏖️</div>
+                    <h3 class="exp-title">Beach Escapes</h3>
+                    <p class="exp-text">Crystal waters, white sands, and total bliss. From Maldives to Algarve —
+                        paradise awaits.</p>
+                </div>
+                <div class="exp-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="exp-icon">🏛️</div>
+                    <h3 class="exp-title">Cultural Immersion</h3>
+                    <p class="exp-text">Homestays, cooking classes, festivals — experience the world from the inside
+                        out.</p>
+                </div>
+                <div class="exp-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="exp-icon">🍜</div>
+                    <h3 class="exp-title">Food &amp; Wine Tours</h3>
+                    <p class="exp-text">Taste your way through Tuscany, Tokyo, or Bangkok with our expert culinary
+                        guides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="test-header" data-aos="fade-up">
+                <p class="section-label">✦ Traveller Stories</p>
+                <h2 class="section-title" style="color:var(--white)">Words from the Road</h2>
+            </div>
+            <div class="test-grid">
+                <div class="test-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-text">"Wanderlust Atlas planned our Kyoto honeymoon flawlessly. Every tiny detail —
+                        from the ryokan rooms to the private matcha ceremony — was beyond magical."</p>
+                    <div class="test-author">
+                        <img class="test-avatar"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sofia" />
+                        <div>
+                            <p class="test-name">Sofia Chen</p>
+                            <p class="test-loc">📍 Vancouver, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-text">"Three weeks trekking Patagonia — this was the trip that changed my life. The
+                        team handled everything; all I had to do was show up and be amazed."</p>
+                    <div class="test-author">
+                        <img class="test-avatar"
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                            alt="Marcus" />
+                        <div>
+                            <p class="test-name">Marcus Webb</p>
+                            <p class="test-loc">📍 Sydney, Australia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="test-stars">★★★★★</div>
+                    <p class="test-text">"Santorini with Wanderlust Atlas was pure luxury without the crazy price tag.
+                        The sunset dinner they booked was straight out of a dream. 10/10 would book again."</p>
+                    <div class="test-author">
+                        <img class="test-avatar"
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Amara" />
+                        <div>
+                            <p class="test-name">Amara Osei</p>
+                            <p class="test-loc">📍 London, UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-inner" data-aos="fade-up">
+                <p class="section-label">✦ Ready to Go?</p>
+                <h2 class="section-title">Your Next Great<br />Adventure Awaits</h2>
+                <p class="section-sub">Let us craft the journey of your lifetime. Personalised, unforgettable, and
+                    perfectly paced — just for you.</p>
+                <a href="#" class="btn btn-gold" style="font-size:1rem; padding:1rem 2.8rem;">Start Planning Today →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ JS LIBRARY BADGES ═══════════════ -->
+    <section class="lib-badge-section">
+        <div class="container">
+            <p class="lib-badge-title">JavaScript Libraries Used in This Assignment</p>
+            <div class="lib-badges">
+                <div class="lib-badge">
+                    <div class="lib-badge-num">1</div>
+                    <div>
+                        <div class="lib-badge-name">Glide.js</div>
+                        <div class="lib-badge-use">Hero image carousel / slider</div>
+                    </div>
+                </div>
+                <div class="lib-badge">
+                    <div class="lib-badge-num">2</div>
+                    <div>
+                        <div class="lib-badge-name">AOS (Animate On Scroll)</div>
+                        <div class="lib-badge-use">Scroll-triggered reveal animations</div>
+                    </div>
+                </div>
+                <div class="lib-badge">
+                    <div class="lib-badge-num">3</div>
+                    <div>
+                        <div class="lib-badge-name">Leaflet.js</div>
+                        <div class="lib-badge-use">Interactive destination map</div>
+                    </div>
+                </div>
+                <div class="lib-badge">
+                    <div class="lib-badge-num">4</div>
+                    <div>
+                        <div class="lib-badge-name">Chart.js</div>
+                        <div class="lib-badge-use">Travel stats &amp; data charts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">Wanderlust <span>Atlas</span></a>
+                    <p>Crafting extraordinary journeys for curious souls since 2009. Every trip we plan is a story
+                        waiting to be told.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="#">Europe</a></li>
+                        <li><a href="#">Southeast Asia</a></li>
+                        <li><a href="#">South America</a></li>
+                        <li><a href="#">Middle East</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Experiences</h4>
+                    <ul>
+                        <li><a href="#">Adventure Treks</a></li>
+                        <li><a href="#">Beach Escapes</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Food & Wine</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Wanderlust Atlas. All rights reserved.</span>
+                <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+    <!-- ══════════════════════════════════════════════
+     3rd-PARTY JS LIBRARIES (load before our script)
+════════════════════════════════════════════════ -->
+
+    <!-- 1. Glide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
+    <!-- 2. AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- 3. Leaflet.js -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+    <!-- 4. Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- Our Script -->
+    <script src="assets/css/main.js"></script>
+
+</body>
+
+</html>
